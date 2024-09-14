@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <form action="table.php" method="post">
+            <label for="nome-apelidos">Nome e Apelidos: </label>
+            <input type="text" name="nome-apelidos" id="nome-apelidos"><br>
+            
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email"><br>
+            
+            <label>Experiencia: </label>
+            <input type="checkbox" name="musico" id="exp">
+            <label for="musico">Músico</label>
+            <input type="checkbox" name="comico" id="exp">
+            <label for="comico">Cómico</label>
+            <input type="checkbox" name="actor" id="exp">
+            <label for="actor">Actor</label><br>
+            
+            <label>Indica a túa idade: </label>
+            <input type="radio" name="idade" id="mozo" value="mozo">
+            <label for="mozo">Entre 20 e 30 anos</label>
+            <input type="radio" name="idade" id="adulto" value="adulto">
+            <label for="adulto">Máis de 40 anos</label><br>
+            
+            <label for="lista">Como atopaches a páxina: </label>
+            <select name="lista" id="lista">
+                <option value="casual">de casualidade</option>
+                <option value="google">polo Google</option>
+                <option value="coñecida">é coñecida da familia</option>
+            </select><br>
+            
+            <label for="coment">Os teus comentarios:</label><br>
+            <textarea name="coment" id="coment"></textarea><br>
+            
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </form>
+    </body>
+</html>
