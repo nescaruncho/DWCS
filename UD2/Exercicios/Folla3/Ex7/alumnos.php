@@ -24,18 +24,18 @@
                     'Anonimo' => 4567
                 ];
 
-                for ($i=0; $i < count($arrayAlumnos); $i++) { 
+                foreach ($arrayAlumnos as $nombre=>$sueldo) {
                     echo "<tr>";
-                    echo "<td>" . array_keys($arrayAlumnos)[$i] . "</td>";
-                    echo "<td>" . array_values($arrayAlumnos)[$i] . "</td>";
+                    echo "<td>$nombre</td>";
+                    echo "<td>$sueldo</td>";
                     echo "</tr>";
                 }
 
-                $media = array_sum($arrayAlumnos) / count($arrayAlumnos);
+                $maximo = max($arrayAlumnos);
 
                 echo "<tr>";
-                echo "<td>Media</td>";
-                echo "<td>$media</td>";
+                echo "<td>Máximo</td>";
+                echo "<td>$maximo</td>";
                 echo "</tr>";
 
                 ?>
