@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabla periódica</title>
 </head>
 <body>
-    <h1>Elementos del grupo seleccionado</h1>
-    <table border="1">
+    <h1>Tabla periódica de los elementos</h1>
+    <table>
         <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Nº atómico</th>
-            </tr>
+            <th>Nombre</th>
+            <th>Nº atómico</th>
         </thead>
         <tbody>
             <?php
-            $elementos = array(
-                "Alcalinos" => array("Li" => 3, "Na" => 11, "K" => 19, "Rb" => 37, "Cs" => 55, "Fr" => 87),
-                "Alcalino-térreos" => array("Be" => 4, "Mg" => 12, "Ca" => 20, "Sr" => 38, "Ba" => 56, "Ra" => 88),
-                "Térreos" => array("B" => 5, "Al" => 13, "Ga" => 31, "In" => 49, "Tl" => 81)
-            );
-
-            if (isset($_POST["elemento"])) {
-                $grupo = $_POST["elemento"];
+                $elementos = array(
+                    "Alcalinos" => array("Li" => 3, "Na" => 11, "K" => 19, "Rb" => 37, "Cs" => 55, "Fr" => 87),
+                    "Alcalino-térreos" => array("Be" => 4, "Mg" => 12, "Ca" => 20, "Sr" => 38, "Ba" => 56, "Ra" => 88),
+                    "Térreos" => array("B" => 5, "Al" => 13, "Ga" => 31, "In" => 49, "Tl" => 81)
+                );
+            
+            if (isset($_GET["elemento"])) {
+                $grupo = $_GET["elemento"];
                 if (array_key_exists($grupo, $elementos)) {
                     foreach ($elementos[$grupo] as $nombre => $numero) {
                         echo "<tr><td>$nombre</td><td>$numero</td></tr>";
