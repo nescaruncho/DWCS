@@ -144,12 +144,12 @@ function ordearMenorMaior($num1, $num2, $num3, $num4) {
         <p>
         <?php
 
-        $n1 = is_numeric_and_set($_GET['n1']) ? $_GET['n1'] : 0;
-        $n2 = is_numeric_and_set($_GET['n2']) ? $_GET['n2'] : 0;
-        $n3 = is_numeric_and_set($_GET['n3']) ? $_GET['n3'] : 0;
-        $n4 = is_numeric_and_set($_GET['n4']) ? $_GET['n4'] : 0;
+        $n1 = $_GET['n1'];
+        $n2 = $_GET['n2'];
+        $n3 = $_GET['n3'];
+        $n4 = $_GET['n4'];
 
-        if (is_numeric_and_set($_GET['accion'])) {
+        if (isset($_GET['accion'])) {
             $accion = $_GET['accion'];
 
             switch ($accion) {
