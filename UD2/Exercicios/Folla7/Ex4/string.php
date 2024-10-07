@@ -46,17 +46,14 @@
         // Mostrar la opción elegida
         echo "<h3>Opción elegida:</h3>";
         switch ($option) {
-            case 'chop':
-                echo "<p>chop()</p>";
+            case 'strtoupper':
+                echo "<p>strtoupper()</p>";
                 break;
-            case 'ltrim':
-                echo "<p>ltrim()</p>";
+            case 'strtolower':
+                echo "<p>strtolower()</p>";
                 break;
-            case 'trim':
-                echo "<p>trim()</p>";
-                break;
-            case 'strip_tags':
-                echo "<p>strip_tags()</p>";
+            case 'ucwords':
+                echo "<p>ucwords()</p>";
                 break;
             default:
                 echo "<p>Función no válida</p>";
@@ -65,17 +62,14 @@
 
         echo "<h3>Cadena modificada:</h3>";
         switch ($option) {
-            case 'chop':
-                echo "<p>" . chop($cadena) . "</p>";
+            case 'strtoupper':
+                echo "<p>" . strtoupper($cadena) . "</p>";
                 break;
-            case 'ltrim':
-                echo "<p>" . ltrim($cadena) . "</p>";
+            case 'strtolower':
+                echo "<p>" . strtolower($cadena) . "</p>";
                 break;
-            case 'trim':
-                echo "<p>" . trim($cadena) . "</p>";
-                break;
-            case 'strip_tags':
-                echo "<p>" . strip_tags($cadena) . "</p>";
+            case 'ucwords':
+                echo "<p>" . ucwords($cadena) . "</p>";
                 break;
             default:
                 echo "<p>Función no válida</p>";

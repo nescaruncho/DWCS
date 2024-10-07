@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="string.php" method="post">
+        <label for="cadena1">Primer texto:</label>
+        <textarea name="cadena1" id="cadena1"></textarea>
+        <label for="cadena2">Segundo texto:</label>
+        <textarea name="cadena2" id="cadena2"></textarea>
+        <div>
+            <input type="checkbox" name="funciones[]" value="strcspn">
+            <label for="strcspn">strcspn()</label>
+        </div>
+        <div>
+            <input type="checkbox" name="funciones[]" value="strpos">
+            <label for="strpos">strpos()</label>
+        </div>
+        <div>
+            <input type="checkbox" name="funciones[]" value="strstr">
+            <label for="strstr">strstr()</label>
+        </div>
+        <div>
+            <input type="checkbox" name="funciones[]" value="substr">
+            <label for="substr">substr()</label>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
