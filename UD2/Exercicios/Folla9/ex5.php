@@ -62,13 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Elige una opción</h1>
     <div>
         <form method="post">
+
             <button type="submit" name="ordenar_alfabeticamente">Ordenar por Clave Alfabéticamente</button>
-            <button type="submit" name="ordenar_valor_alfabeticamente">Ordenar por Valor Alfabéticamente</button>
-            <button type="submit" name="ordenar_longitud_clave">Ordenar por Longitud de Clave (Menor a Mayor)</button>
-            <button type="submit" name="ordenar_longitud_clave_desc">Ordenar por Longitud de Clave (Mayor a Menor)</button>
+            <button type="submit" name="ordenar_menor_mayor">Ordenar por puntos menor a mayor</button>
+            <button type="submit" name="ordenar_mayor_menor">Ordenar por puntos de mayor a menor</button>
+            <button type="submit" name="ordenar_longitud_clave">Ordenar por Longitud de Clave</button>
         </form>
     </div>
     <h2>Resultado:</h2>
-
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Puntos</th>
+        </tr>
+        <?php
+        foreach ($puntos as $nombre => $punto) {
+            echo "<tr><td>$nombre</td><td>$punto</td></tr>";
+        }
+        ?>
+    </table>
 </body>
 </html>
