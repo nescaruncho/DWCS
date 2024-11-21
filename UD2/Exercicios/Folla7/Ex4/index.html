@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="string.php" method="post">
+        <label for="string">Introduce una cadena de texto:</label>
+        <textarea name="string" id="string"></textarea>
+        <label for="function">Elige una función:</label>
+        <div>
+            <input type="radio" id="strtoupper" name="function" value="strtoupper">
+            <label for="strtoupper">strtoupper()</label>
+        </div>
+        <div>
+            <input type="radio" id="strtolower" name="function" value="strtolower">
+            <label for="strtolower">strtolower()</label>
+        </div>
+        <div>
+            <input type="radio" id="ucwords" name="function" value="ucwords">
+            <label for="ucwords">ucwords()</label>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

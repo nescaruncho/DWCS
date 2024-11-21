@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f4f4f9;
+	color: #333;
+	line-height: 1.6;
+}
+
+h2 {
+	text-align: center;
+	padding: 15px;
+	background-color: #333;
+	color: #f4f4f9;
+	font-size: 2rem;
+	border-radius: 5px;
+}
+
+h3 {
+	margin: 20px;
+	font-size: 1.5rem;
+	color: #444;
+}
+
+#contenedorBotons, #contenedorIncognitas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px auto;
+}
+
+#todo {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	padding: 20px;
+}
+
+aside {
+	flex: 1;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+	flex: 2;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-size: 1.1rem;
+}
+
+article p {
+	padding: 20px;
+	line-height: 1.6;
+}
+
+button {
+	height: 3em;
+	width: 12em;
+	margin: 1em;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.divIncognitas {
+	height: 2.5em;
+	margin: 1em;
+}
+
+input, label {
+	height: 3em;
+	font-size: 1rem;
+}
+
+input {
+	width: 9em;
+	margin-left: 1em;
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#resultado {
+	height: auto;
+	font-size: 1.3em;
+	background-color: #e9ecef;
+	padding: 1em;
+	text-align: center;
+	margin: 1em 0;
+	border-radius: 5px;
+}
+
+p {
+	padding: 10px;
+}
+
+li, ol {
+	padding-left: 40px;
+	padding-bottom: 20px;
+}
+
+article div {
+	margin: 20px 30px;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 5px;
+}
