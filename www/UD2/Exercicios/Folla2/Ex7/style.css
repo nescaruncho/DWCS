@@ -1,0 +1,35 @@
+body {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 200px;
+    text-align: center;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0 5px;
+}
+
+th {
+    background-color: gray;
+    color: white;
+    padding: 0 5px;
+}
+
+.impar {
+    background-color: black;
+    color: yellow;
+}
+
+.par {
+    background-color: white;
+    color: black;
+    font-style: italic;
+}
