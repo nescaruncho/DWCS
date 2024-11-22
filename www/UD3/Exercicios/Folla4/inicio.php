@@ -17,12 +17,13 @@ require_once("conexion.php");
         <form action="produtos.php" method="get">
             <select name="familia" id="familia">
                 <?php
-                    $sentenciaPrep = $conexion->prepare("SELECT nombre FROM familias");
+                    $sentenciaPrep = $conexion->prepare("SELECT cod, nombre FROM familias");
                     $sentenciaPrep->execute();
 
                     $resultado = $sentenciaPrep->get_result();
 
                     while($fila = $resultado->fetch_array(MYSQLI_BOTH)){
+                        
                         echo "<option value='" . $fila['cod'] . "'>" . $fila['nombre'] . "</option><br>";
                     }
                 ?>
@@ -31,9 +32,7 @@ require_once("conexion.php");
             <input type="search" name="consulta" id="consulta" placeholder="Busca por nombre">
             <input type="submit" value="Buscar">
         </form>
-        <form action="edicion.php" method="get">
-            <input type="button" value="Edición">
-        </form>
+        <button><a href="edicion.php">Edición</a></button>
     </div>
 </body>
 </html>
