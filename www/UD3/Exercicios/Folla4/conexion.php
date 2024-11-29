@@ -1,7 +1,7 @@
 <?php
     $servidor = "db";
     $usuario = "root";
-    $passwd = "root";
+    $passwd = "abc123.";
     $base = "tendaInformatica";
 
     $conexion = new mysqli($servidor, $usuario, $passwd, $base);
