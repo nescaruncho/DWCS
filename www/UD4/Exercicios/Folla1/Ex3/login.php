@@ -3,10 +3,14 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    if ($_POST['username'] == 'Ana' || $_POST['username'] == 'Xan' && $_POST['password'] == 'abc123.') {
+        $_SESSION['username'] = $_POST['username'];
+    } else {
+        $error = 'Usuario o contraseña incorrectos';
+        
+    }
 
-    
+     
 }
 
 ?>
